@@ -1,0 +1,134 @@
+tag yang bisa di gunakan untuk
+<head> dan <body>
+
+1. tag yang bisa kita gunakan di dalam 
+<head>
+
+- Judul Halaman
+<title></title>
+
+- CSS
+<style></style>
+
+- Javascript
+<script></script>
+
+- Metadata
+<meta></meta>
+
+metadata itu penting, karena untuk mendeskripsikan web kita, seperti :
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Pemrograman Web">
+	<meta name="keywords" content="HTML,CSS,JavaScript">
+	<meta name="author" content="wardhanna">
+</head>
+
+2. tag yang bisa kita gunakan di dalam
+<body>
+
+- teks
+h = heading
+p = paragraf
+<h1>, <h2>, <h3>, <h4>, <h5>, <h6>, <p>,...
+
+- pendukung teks
+br = baris baru
+hr = horizontal
+<br>, <hr>, <em>, <strong>,...
+
+- gambar
+img = image
+<img>
+
+- hyperlink
+a = anchor
+<a>
+
+- list (bullets & numbering)
+ul = ant order list = list tidak ter urut
+ol = order list
+li = list item
+dl = definition list
+<ul>, <ol>, <li>, <dl>, <dt>, <dd>
+
+- tabel
+<table>, <thead>, <tbody>,...
+
+- form
+<form>, <input>, <select>, <button>,...
+
+- script
+<script>
+
+- object
+<object>
+
+- grouping
+<div>, <span>
+
+- komentar
+<!-- ini adalah komentar. -->
+
+
+Struktur Tag
+
+<namatag atribut="nilai/value">
+
+Contoh :
+
+<body bgcolor="lightblue">
+
+body = nama tag
+
+bgcolor = atribut
+"lightblue" = nilai/value
+
+sebuah tag, boleh saja memliki lebih dari satu atribut seperti :
+
+<body bgcolor="lightblue" id="myid" class="myclass">
+
+body = nama tag
+
+bgcolor = atribut
+id = atribut
+class = atribut
+
+"lightblue" = nilai/value
+"myid" = nilai/value
+"myclass" = nilai/value
+
+tiap - tiap tag mempunyai atribut yang default / global yang kita sebut dengan
+atribut global
+
+berikut beberapa atribut global
+
+-accesskey
+tiap - tiap tag boleh mempunyai atribut accesskey fungsi nya adalah untuk menentukan elemen ini bisa di akses menggunakan keyboard atau sourcecut
+
+-class
+untuk menandai bahwa elemen yang di gunakan mempunyai class apa
+
+-id
+untuk menandai bahwa elemen yang di gunakan mempunyai id apa
+
+-dir
+untuk menentukan arah tulisan nya / 
+direction
+
+-lang
+untuk language = bahasa
+
+-style
+untuk menyisipkan line CSS
+
+-tabindex
+untuk menentukan urutan saat kita pencet tab arah kursosnya akan menentukan posisi dimana
+
+-title
+untuk judul elemen
+
+untuk melihat atribut lengkap nya bisa mengunjungi
+
+www.w3school.com/Tags
