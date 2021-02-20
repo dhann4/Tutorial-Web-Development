@@ -1,0 +1,31 @@
+CSS layouting adalah teknik CSS untuk mengatur dan meletakkan atau memposisikan elemen - elemen HTML yang kita buat menggunakan syntax CSS, jadi kita bisa mengatur ukuran, posisi, ataupun perilaku dari elemen - elemen HTML tersebut.
+
+jika kita ingin membuat website yang tidak hanya informatif tapi juga bagus dan menarik untuk dilihat maka laatihan ini adalah latihan yang tepat untuk kita
+
+PRE-REQUISITE
+Yang harus di pelajari sebelum latihan CSS Layouting adalah :
+
+1. HTML Dasar
+2. CSS Dasar
+
+SYLLABUS
+Yang akan kita pelajari pada latihan ini adalah :
+
+1. DISPLAY
+2. DIMENSI PADA CSS
+3. OVERFLOW
+4. BOX MODEL
+5. FLOAT
+6. POSITION
+
+FINAL OUTPUT
+Hasil akhir dari latihan ini
+
+kita akan membuat website sederhana dengan menggunakan 6 latihan yang kita bahas di atas
+
+TOOLS / SOFTWARE
+Yang harus disiapkan
+1. CODE EDITOR ( SUBLIME TEXT 3,  NOTEPAD++, ATOM.IO, BRACKETS.IO, DREAMWEAVER, atau 
+				memakai code editor favorit kita )
+2. WEB BROWSER ( GOOGLE CHROME, MOZILLA FIREFOX, OPERA, SAFARI[Pengguna MAC] atau
+				memakai browser favorit kita )
