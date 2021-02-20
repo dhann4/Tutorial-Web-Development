@@ -1,0 +1,56 @@
+<!--
+
+	position adalah element yang memungkinkan kita menggeser
+	element lain tanpa mempengaruhi element sebelum nya
+
+	position memiliki value
+	-> static
+	-> relative
+	-> absolute
+	-> fixed
+
+Static ============================================================
+	"-> static adalah nilai default dari tiap=tiap element ketika
+		tidak di beri properti position
+	
+	 -> menggunakan position selain static ( non-static ), akan
+		membuat sebuah element menjadi seolah-olah berbeda dimensi dari elemen lainnya
+		
+	 ->	element yang di beri postion selain static dapat
+	 	menggunakan properti top, left, bottom, dan right untuk mengatur posisinya"
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Coba Posotion</title>
+	<style>
+		div {
+			width: 200px;
+			height: 200px;
+		}
+
+		.satu {
+			background-color: lightgreen;
+		}
+
+		.dua {
+			background-color: salmon;
+			position: static;
+		}
+
+		.tiga {
+			background-color: violet;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="satu"></div>
+	<div class="dua"></div>
+	<div class="tiga"></div>
+
+</body>
+</html>
