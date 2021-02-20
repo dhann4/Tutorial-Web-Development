@@ -1,4 +1,4 @@
-Tutorial untuk Web Development
+Tutorial untuk Web Development Dasar
 list :
 1. HTML
 2. CSS
