@@ -1,0 +1,82 @@
+/*
+	Bakcground bisa di tambah kan ke tag body ataupun ke elemen lain yang spesifik.
+	Property pada background
+
+	1. background-color = mengatur warna pada background
+	2. background-image = mengatur gambar pada background
+	3. background-repeat = mengatur jenis pengulangan gambar pada background
+	4. background-position = mengatur posisi gambar pada background
+=============================================================================================
+
+1. background-color
+	memiliki value yang sama seperti text
+
+body{
+	background-color: lightblue;
+}
+
+
+
+2. background-image
+	untuk bacground-image, yang harus di lakukan pertama adalah meletakan gambar pada folder yang sama dengan file css
+
+body{
+	background-image: url(nama_folder/nama_gambar.png); (bisa menggunakan extensi yang lain seperti .jpg)
+}
+untuk background-image ini, akan selalu otomatis mengulangi gambar yang resolusinya lebih kecil dari browser, seperti 300x300
+maka akan selalu di ulagi 1 gambar tersebut sehingga memenuhi browser.
+
+
+
+3. background repeat
+	jika pada bacground-image ingin melakukan perulangan pada sumbu x atau dari kiri ke kanan dan hanya ingin melakukan perulangan dari atas ke bawah atau sumbu y
+	maka gunakanlah background-repeat ini
+
+body{
+	background-image: url(nama_folder/nama_gambar.png);
+
+	background-repeat: repeat-x; (perulangan kiri ke kanan)
+	background-repeat: repeat-y; (perulangan atas ke bawah)
+	background-repeat: no-repeat; (tidak melakukan perulangan)	
+}
+
+
+
+4. background-position
+	jika sebelumnya menggunakan background-repeat: no-repeat; maka sekarang bisa mengakses
+	background-position
+
+	untuk sumbu y pada background-position adalah
+	top/center/bottom
+
+	sedangkan untuk sumbu x adalah
+	left/center/right
+
+	lalu bisa di kombinasikan juga seperti
+	top left
+	top center
+	top right
+	center left
+	center right
+	center center
+	bottom left
+	bottom center
+	bottom right
+	10% 10% = x% y%
+	x-10 y-10 = x-pos y-pos
+
+body{
+	background-image: url(nama_folder/nama_gambar.png);
+
+	background-repeat: no-repeat; (tidak melakukan perulangan)	
+
+	background-position: ;
+}
+
+ke empat properti tadi bisa di singkat sama seperti font contoh
+
+body {
+	background: color url() position repeat;
+}
+
+*/
