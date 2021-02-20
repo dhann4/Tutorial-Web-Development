@@ -1,0 +1,111 @@
+Display pada CSS, sebelum itu kita akan membahas tentang akan membahas tag HTML yaitu <div> & <span>
+
+"
+	Tag pada HTML digunakan untuk memberikan 'maksud / arti' pada sebuah konten (<p> untuk paragraf, <h1> untuk heading utama, dll).
+
+
+	Tag <div> dan <span> tidak memiliki 'arti' apapun, keduanya digunakan untuk mengelompokkan tag-tag HTML dan memberikan informasi terhadap tag-tag tersebut
+"
+
+
+lalu apa hubungannya dengan display ?
+
+<div></div>
+dan
+<span></span>
+
+memiliki properti display, sebenarnya properti lain juga memiliki display default
+
+<div></div> memiliki property div { display: block; }
+<span></span> memiliki property span { display: inline; }
+
+definisinya adalah
+"
+	Setiap tag HTML berada di dalam sebuah 'kotak'. Property 'display' pada CSS
+	mengatur perilaku dari kotak tersebut.
+
+	Setiap tag pada HTML memiliki nilai default untuk properti 'display'. Tetapi
+	kita juga dapat mengubah perilaku dari tag tersebut dengan mengganti value-nya
+	defaultnya yaitu block atau inline (tidak di sarankan mengganti display nya
+	biarkan saja default).
+"
+
+value dari display
+1. inline
+2. inline-block
+3. block
+4. none
+======================================================
+
+1. inline
+	-> Element HTML yang secara default tidak menambahkan baris baru ketika di buat
+	-> Lebar dan tinggi elementnya sebesar konten yang ada di dalamnya
+	-> Kita tidak dapat mengatur tinggi dan lebar dari element inline
+	-> Margin dan padding hanya mempengaruhi element secara horizontal, tidak vertical
+	(jangan bingung kita akan belajar pada materi box model)
+
+element dari inline default nya
+-> b
+-> strong
+-> i
+-> em
+-> a
+-> span
+-> sub
+-> sup
+-> button
+-> input
+-> label
+-> select
+-> textarea
+(contoh ada di display.html)
+
+======================================================
+
+lalu bagaimana caranya mengubah page <a> yang displaynya inline
+kita harus memakai value yang ke dua yaitu
+
+2. inline-block
+	-> Tidak ada element yang secara default memiliki properti
+	   display: inline-block;
+	-> Kita harus ubah secara manual properti tersebut
+	-> Perilaku dasarnya sama dengan element inline
+	-> Perbedaannya, element inline-block dapat kita atur tinggi dan lebar-nya
+(contoh ada di file display2.html)
+
+======================================================
+
+3. block
+	-> Element HTML yang secara default menambahkan baris baru
+	   ketika dibuat, jika kita bikin element yang memiliki display block maka element nya berada di bawah element pertama bukan di sebelah kanan seperti inline tadi
+	-> Jika tidak di atur lebar-nya, maka lebar default dari
+	   element block akan memenuhi lebar dari browser / parent-nya
+	-> Kita dapat mengatur tinggi dan lebar dari element block
+	-> Di dalam element block, kita dapat menyimpan tag dengan
+	   element inline, inline-block, atau bahkan element block lagi 
+contoh element block adalah
+1. h1-h6
+2. p
+3. ol
+4. ul
+5. li
+6. form
+7. hr
+8. div
+......
+(contoh ada di display3.html)
+
+======================================================
+
+4. none
+	-> digunakan untuk menghilangkan sebuah element
+
+(contoh ada di display4.html)
+
+======================================================
+
+selain itu semua kita juga bisa mengubah display default dari
+sebuah element meskipun kita jarang menggunakannya kecuali untuk
+kasus - kasus tertentu
+
+(contoh ada di display5.html)

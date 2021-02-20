@@ -1,0 +1,60 @@
+/*
+untuk penulisannya sama seperti margin
+
+-> padding-top
+-> padding-right
+-> padding-bottom
+-> padding-left
+-> padding
+
+
+div {
+	width: 300px;
+	height: 300px;
+	background-color: coral;
+
+	margin: 20px auto;
+
+	padding-left: 20px;
+}
+hasilnya di sebelah kiri akan bertambah sebesar 20px,
+biasanya padding di gunakan untuk mengatur jarak tulisan dengan
+kotak nya
+
+selalu ingat ini!
+
+-> padding tidak bisa diberi nilai negatif
+-> padding tidak memiliki nilai auto
+-> padding mempengaruhi ukuran dari box yang kita buat, artinya jika kita membuat sebuah box
+   dengan tinggi dan lebar yang sudah di tentukan, saat memakai padding tinggi dan lebar box tersebut bisa saja berubah
+contoh nya:
+
+div {
+	width: 300px;
+	height: 300px;
+	background-color: coral;
+
+	margin: 20px auto;
+
+	padding: 50px;
+}
+
+maka hasilnya, box yang kita buat akan bertambah dari 300x300px
+menjadi 400x400px
+
+bisa saja jika kita ingin kotak nya tetap dengan mengurangi
+value tinggi dan lebarnya, contoh
+
+div {
+	width: 200px;
+	height: 200px;
+	background-color: coral;
+
+	margin: 20px auto;
+
+	padding: 50px;
+}
+
+maka hasil nya adalah, kotak nya menjadi 300x300px
+tapi, jarak antara tulisan di dalam kotak berjarak 50px
+*/

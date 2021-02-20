@@ -1,0 +1,29 @@
+Dimensi valuenya dibagi menjadi 2:
+1. width
+2. height
+
+lalu memiliki nilai satuan
+A. Satuan Absolute
+	1. px (pixel)
+B. Satuan Relative terhadap element pembungkusnya / parent
+	2. % (per-cent)
+C. Satuan yang di ambil dari dunia nyata
+	3. in (inch)
+	4. cm (centimeter)
+	5. mm (milimeter)
+D. Digunakan untuk media cetak printing design, dan biasanya di gunakan untuk mengatur ukuran font
+	6. pt (point)
+	7. pc (pica)
+
+===================================================================
+
+Overflow digunakan untuk mengatur perilaku element yang kasus nya
+keluar jalur dari parent nya
+
+Overflow valuenya dibagi menjadi 4:
+
+1. visible = adalah value default, meskipun tidak di kasih visible element pasti default nya adalah visible, artinya jika ada konten yang
+			 keluar jalur dari parent nya maka akan di perlihatkan
+2. auto = css akan secara otomatis menambahkan scroll ketika kontennya tidak cukup lagi
+3. hidden = menyembunyikan konten yang keluar jalur dari parent nya
+4. scroll = css akan secara otomatis menambahkan scroll walaupun konten di dalam nya cukup

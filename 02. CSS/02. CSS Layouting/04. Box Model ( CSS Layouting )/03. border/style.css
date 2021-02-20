@@ -1,0 +1,291 @@
+/*
+
+3. border sama seperti margin dan padding bisa kita beri value
+
+-> border-top
+-> border-right
+-> border-bottom
+-> border-left
+-> border
+
+
+cara penulisan nya berbeda seperti padding dan margin
+
+div {
+	width: 200px;
+	height: 200px;
+	background-color: coral;
+
+	margin: 20px auto;
+
+	padding: 50px;
+
+	border: 5px solid black;
+}
+
+artinya, untuk value pertama 5px adalah ketebalan bordernya
+untuk value kedua solid adalah jenis bordernya
+untuk value ketiga black adalah warna dari bordernya
+
+atau bisa kita artikan seperti ini
+
+border: width style color;
+
+untuk style nya sendiri, kita bisa memakai beberapa contoh seperti berikut
+
+1. solid = yang sering kita lihat pada umumnya
+2. dotted = border yang stylenya titik-titik
+3. dashed =  border yang stylenya garis putus-putus
+4. double = border yang stylenya double border
+
+
+kita juga bisa menuliskan satu per satu seperti ini
+
+div {
+	width: 200px;
+	height: 200px;
+	background-color: coral;
+
+	margin: 20px auto;
+
+	padding: 50px;
+
+	border-width: 5px;
+	border-style: solid;
+	border-color: black;
+}
+
+atau kita ingin bordernya hanya di satu sisi, bisa gunakan seperti margin
+
+div {
+	width: 200px;
+	height: 200px;
+	background-color: coral;
+
+	margin: 20px auto;
+
+	padding: 50px;
+
+	border-left: 5px solid black;
+	border-right: 10px dashed blue;
+
+}
+
+perlu di ingat!
+
+-> border juga menambah ukuran element
+   kita asumsikan, total dimensi = width/height + padding + border
+   kita ambil contoh dia atas,
+
+div {
+	width: 200px;
+	height: 200px;
+	background-color: coral;
+
+	margin: 20px auto;
+
+	padding: 50px;
+
+	border-left: 5px solid black;
+	border-right: 10px dashed blue;
+
+}
+
+total dimensi adalah
+
+width/height = 200/200px
+padding = 50px (di keempat sisi, atas = 50, kanan = 50, bawah = 50, kiri = 50)
+
+200/200px + (50px) = lebarnya menjadi 300px
+(bingung yah, oke perlahan-lahan)
+
+kita jumlahkan padding di keempat sisi nya
+atas = 50
+kanan = 50
+50 + 50 = 100
+
+bawah = 50
+kiri = 50
+50 + 50 = 100
+
+oke kita tau nilai dari padding atas dan bawah sebesar 100px
+lalu kiri dan kanan nya juga sebesar 100px
+
+sekarang kita jumlahkan, kita sudah tau yah width dan height pada kotak(bukan padding)
+memiliki masing-masing nilai sebesar 200px
+
+jika padding atas + padding bawah sebesar 100px
+kita jumlahkan dengan height dari kotaknya yaitu 200px
+maka hasilnya adalah 300px
+
+lalu padding kiri + padding kanan sebesar 100px
+kita jumlahkan dengan width dari kotaknya yaitu 200px
+maka hasilnya adalah 300px
+
+jadi, width dan height masing-masing memiliki nilai 300px
+
+width = 300px
+height = 300px
+
+kita jumlahkan lagi dengan border-left yang memiliki nilai width sebesar 5px
+lalu border-right memiliki nilai width sebesar 10px
+
+kira-kira berapa hasilnya?
+jawabannya adalah
+
+width = 315px
+height = 315px
+
+kita mulai jumlahkan biar tidak kebingungan
+
+kita tau width dan height nilai nya bertambah karena adanya padding di keempat sisi sebesar 50px
+
+width = 300px
+height = 300px
+
+lalu kita jumlahkan dengan border-left yang memiliki nilai width sebesar 5px
+
+width = 300 + 5 = 305
+height = 300 + 5 = 305
+
+dan kita jumlahkan dengan border-right memiliki nilai width sebesar 10px
+
+width = 305 + 10 = 315px
+height = 305 + 10 = 315px
+
+nah, sekarang yang awalnya kita memberi nilai
+width = 200px
+height = 200px
+
+sekarang bertambah dengan adanya padding dan juga border kiri dan kanan menjadi
+width = 315px
+height = 315px
+
+singkat nya begini
+
+total dimensi adalah
+
+200/200 + 50 + 5 + 10 = 315px
+
+biar tidak bingung saya menjelaskan nya di atas, kalau hanya seperti itu
+yang kita lihat justru berbeda (karena setiap orang pemikirannya berbeda-beda), bisa saja
+200 di bagi 200 di tambah 50 di tambah 5 di tambah 10 = 315
+
+pasti ada yg bingung nanti dan bertanya-tanya, kok hasilnya 315?
+kan 200 di bagi 200 = 0
+lalu 0 + 50 = 50
+lalu 50 + 5 = 55
+dan 55 + 10 = 65
+
+atau kita bisa lihat di browser, dengan klik kanan lalu pilih inspect dan pilih computed di bagian pojok kiri bawah.
+jika kita ingin tetap width dan height nya menjadi 200px kita kurangi saja dengan 15 hasilnya 185px
+jadi jika kita jumlahkan semuanya kotaknya tetap menjadi 300x300px.
+sekarang kita harus berhati-hati jika di dalam kotak tersebut ada padding dan border, agar tidak mengenai dimensi nya
+
+(untuk contoh ini berada di file border1.html)
+=============================================================================================================================================
+
+sebenarnya kita tidak perlu untuk mengkalkulasikan seperti ini
+di CSS 3 ada properti baru yang namanya box-sizing untuk mengkalkulasikan seperti yang di atas.
+
+( jika kita misal membuat element, yang kita atur hanya dimensi lebarnya saja untuk tinggi nya itu jarang sekali kita atur
+karena tingginya itu sesuai dengan konten yang kita kasih, semakin banyak konten nya maka semakin tinggi juga kotaknya.
+Jika tingginya kita kasih ukuran, nanti ketika kontennya lebih besar dari tingginya, itu nanti akan keluar dari kontennya,
+kita harus mengakali dengan menggunakan overflow, ini juga sangat merepotkan.
+Jadi biasakan yang di atur hanya lebar nya saja, tinggi nya itu biasanya tidak di atur )
+
+div {
+	width: 600px;
+	margin: 10px auto;
+}
+
+.satu {
+	background-color: royalblue;
+	padding: 10px;
+	border: 5px solid red;
+}
+
+.dua {
+	background-color: lightgreen;
+	padding: 30px;
+	border: 10px dashed orange;
+}
+
+nah kita bisa lihat bahwa kotak satu dan dua berbeda ukuran,
+jika kita ingin membuat tinggi dan lebar yang sama pada kotak 1
+dan kotak 2, kita harus mengaturnya menjadi
+
+div {
+	width: 600px;
+	margin: 10px auto;
+}
+
+.satu {
+	width: 570px;
+	background-color: royalblue;
+	padding: 10px;
+	border: 5px solid red;
+}
+
+.dua {
+	width: 520px;
+	background-color: lightgreen;
+	padding: 30px;
+	border: 10px dashed orange;
+}
+
+cara menghitungnya di kotak pertama
+600 - [2*10] - [2*5] = 570px
+
+penjelasan =
+600 - 20 (adalah nilai dari padding kiri dan kanan yaitu 2*10 = 20) = 580
+580 - 10 (adalah nilai dari border kiri dan kanan yaitu 2*5 = 10 ) = 570
+
+
+cara menghitungnya di kotak kedua
+600 - [2*30] - [2*10] = 520px (tanda bintang berarti kali)
+
+penjelasan =
+600 - 60 (adalah nilai dari padding kiri dan kanan yaitu 2*30 = 60) = 540
+540 - 20 (adalah nilai dari border kiri dan kanan yaitu 2*10 = 20) = 520
+
+ada di mana saat kita nanti mengubah padding dan bordernya di tengah jalan
+maka otomatis width nya juga akan berubah.
+
+jadi sebaiknya latihlah ilmu matematika kita, biar bisa menghitungnya dengan cepat,
+karena kita tau rumus dari perhitungan dimensi di atas jadi lebih mudah lagi menghitung total dimensinya.
+
+
+oke, pasti kita merasa ini merepotkan yah.. harus mengatur width nya setiap kita merubah
+nilai padding dan border.
+
+ada yang simple yaitu dengan menggunakan properti khusus box-sizing,
+
+div {
+	width: 600px;
+	margin: 10px auto;
+	box-sizing: border-box;
+}
+
+artinya, ukuran dari box nya akan tetap 600px meskipun value dari border dan padding nya kita ganti
+
+.satu {
+	background-color: royalblue;
+	padding: 10px;
+	border: 15px solid red;
+}
+
+.dua {
+	background-color: lightgreen;
+	padding: 30px;
+	border: 10px dashed orange;
+}
+
+dengan menggunakan properti box-sizing ini, saat kita ubah value bordenya menjadi
+15px, maka yang terjadi adalah ukuran kotak nya masih akan sama tapi bordernya terlihat tebal
+
+untuk pembahasan padding, border, dan margin selesai sampai disini
+lalu untuk content, content bukanlah bagian dari css layouting meskipun
+content merupakan bagian dari box model, karena content sudah di bahas di css dasar
+
+*/

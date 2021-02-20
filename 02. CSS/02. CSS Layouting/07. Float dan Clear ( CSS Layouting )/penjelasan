@@ -1,0 +1,277 @@
+Float merupakan properti pada CSS untuk mengatur posisi sebuah elemen. Sebuah elemen dapat dipaksa untuk berada di sebelah kiri
+atau kanan dari parent / element pembungkusnya dengan menggunakan
+properti ini
+
+float memiliki 3 value
+	1. none = default pada element
+	2. left
+	3. right
+
+lalu ada juga yang disebut
+normal flow dan out-of flow, kedua ini adalah perilaku dari element
+ketika kita beri css.
+
+untuk normal flow = jika element dengan display block akan berada
+di bawah element sebelumnya, jika element dengan display nya
+inline akan berada di sebelah kanan
+
+sedangkan untuk out-of flow = adalah float yang memiliki tipe ini
+
+
+yang bisa dilakukan menggunakan poreprti float
+
+1. text wrapping = membuat text mengelilingi gambar / element lain
+2. image gallery = membuat serangkaian gambar menjadi galeri
+3. multi-column layout = membuat halaman memiliki beberapa kolom
+dan masih banyak lagi
+
+===================================================================
+
+masalah yang terjadi ketika memakai ketiga properti dari float
+
+1. text wrapping
+text akan bermasalah ketika lebih sedikit dari gambar nya, seperti
+box pembungkusnya runtuh atau hanya mengikuti banyak dari text
+bukan gambar, karena box pembungkus tidak menganggap adanya gambar.
+cara mengakalinya ada beberapa cara yaitu
+-> menggunakan properti overflow
+-> menggunakan <div> kosong
+-> menggunakan teknik micro clearfix
+
+Cara menggunakan properti overflow
+pada containernya kita tambahkan properti overflow
+
+.container {
+	width: 800px;
+	border: 1px solid black;
+	margin: auto;
+	padding: 5px;
+
+	overflow: auto;
+}
+
+.img {
+	margin: 5px;
+	float: right;
+}
+
+contoh di atas juga tidak 100% akurat,
+==================================================================
+
+untuk yang lebih akurat kita bisa menggunakan properti
+
+clear = berfungsi untuk menghentikan / membersihkan float
+lalu di bagi menjadi 3 value yaitu
+-> left
+-> right
+-> both
+
+cara membersihkannya kita menggunakan teknik kedua yaitu <div>
+kosong di akhir dari floatnya
+
+HTML==============================================================
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Coba Float 1</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<img src="#" alt="#">
+		
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<p>
+
+		<div class="clear">
+	</div>
+
+</body>
+</html>
+
+CSS===============================================================
+
+.container {
+	width: 800px;
+	border: 1px solid black;
+	margin: auto;
+	padding: 5px;
+}
+
+.img {
+	margin: 5px;
+	float: left;
+}
+
+.clear {
+	clear: left;
+}
+
+
+
+untuk kasus yang jika kita ingin tulisannya di bawah cukup dengan
+mengikuti float nya
+
+jika float nya left maka clear juga harus left dan sebaliknya
+
+lalu untuk kasus yang multi-column
+
+.container {
+	width: 600px;
+	border: 1px solid black;
+	margin: auto;
+	padding: 5px;
+}
+
+.kiri {
+	width: 150px;
+	height: 500px;
+	background-color: salmon;
+	padding: 10px;
+	box-sizing: border-box;
+
+	float: left;
+}
+
+.tengah {
+	width: 500px;
+	height: 500px;
+	background-color: lightskyblue;
+
+	float: left;
+}
+
+.kanan {
+	width: 150px;
+	height: 500px;
+	background-color: limegreen;
+
+	float: right;
+}
+
+
+jika ada kasus begini lalu kita ingin membersikan keduanya. gunakan saja both
+
+.clear {
+	clear: both;
+}
+
+tapi ada yang bilang dengan menggunakan <div> kosong seperti ini
+membuat code kita menjadi tidak rapi karena kita hanya membuat
+<div> kosong ini untuk membersihkan float jadi <div> kosong ini
+tidak ada maknanya sama sekali
+
+lalu ada juga yang bilang hal ini tidak bagus untuk di lakukan
+
+
+ada teknik yang lebih baik lagi dari ini yaitu dengan menggunakan
+teknik micro clearfix yang di ciptakan oleh Nicolas Gallagher.
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+atau kita bisa cari aja di google dengan keywoard micro clearfix.
+
+kita bisa lihat dia juga menggunakan teknik both, tapi beda nya
+teknik ini memungkinkan kita untuk tidak menambahkan element
+HTML kosong seperti yang kita buat di atas tadi yaitu 
+<div class="clear">.
+
+karena teknik dari Nicolas Gallagher menggunakan pseudo element
+:before
+:after.
+
+
+cara menggunakan nya adalah, kita ke file CSS kita lalu paste kan
+script di atas seterah mau di bawah script kita atau di atas
+
+
+
+
+kita hapus saja clear yang ada pada CSS kita, lalu pada bagian
+script CSS yang kita copy, cari yang namanya cf.
+
+kita bebas mengganti nama class nya apa saja, tapi lebih baik biarkan saja menjadi class cf
+
+My CSS============================================================
+
+.container {
+	width: 800px;
+	border: 1px solid black;
+	margin: auto;
+	padding: 5px;
+}
+
+.img {
+	margin: 5px;
+	float: left;
+}
+
+CSS Script========================================================
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+ini adalah bagian penting, untuk cf yang di atas ini dan
+yang berada di bawahnya, hanya untuk mengakali pada browser saja
+agar tampilannya tidak berbeda
+
+
+.cf {
+    *zoom: 1;
+}
+
+HTML==============================================================
+
+kita tambahkan cf element yang ingin kita bersihkan floatnya
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Coba Float 1</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div class="container cf">
+
+		<img src="#" alt="#">
+		
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<p>
+	</div>
+
+</body>
+</html>
+

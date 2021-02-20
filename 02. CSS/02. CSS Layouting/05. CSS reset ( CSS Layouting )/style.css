@@ -1,0 +1,228 @@
+/*
+div {
+	width: 200px;
+	height: 200px;
+	background-color: black;
+}
+
+maka hasilnya kita bisa lihat box yang berwarna hitam, tanpa kita kasih
+margin, hasilnya akan tetap ada jarak
+
+meski kita buat
+div {
+	width: 200px;
+	height: 200px;
+	background-color: black;
+	margin: 0;
+}
+
+tidak akan terjadi apa-apa, tapi jika kita buat
+div {
+	width: 200px;
+	height: 200px;
+	background-color: black;
+	margin: 20px;
+}
+
+maka hasilnya box tadi bergeser sebanyak 20px dari browser.
+Itu membuktikan bahwa banyak element-element pada HTML yang
+memiliki margin atau padding default,
+contoh nya adalah element body, body itu memiliki margin dan padding
+default.
+
+Jadi jika kita hapus margin nya
+
+body {
+	margin: 0;
+}
+
+div {
+	width: 200px;
+	height: 200px;
+	background-color: black;
+}
+
+bisa kita lihat, jika box hitam itu menempel pada browser tidak
+lagi memiliki jarak seperti sebelum nya, itulah yang dinamakan
+reset, kita melakukan reset pada element body yang memiliki
+nilai default pada margin.
+
+dan nilai margin atau padding ini tidak hanya terdapat pada body, tapi juga
+terdapat pada element lain, contohnya adalah <h1> dan juga <p>
+
+maka jika kita reset h1 dan p
+
+body, h1, p {
+	margin: 0;
+	padding: 0;
+}
+
+div {
+	width: 200px;
+	height: 200px;
+	background-color: black;
+}
+
+maka hasilnya yang awalnya tadi memiliki nilai margin dan padding default,
+saat kita reset maka yang akan terjadi adalah nilai margin dan padding nya berubah
+menjadi 0.
+
+Apa gunanya reset ini?
+reset ini berguna agar kita bisa mengambil akses atau
+kendali sepenuhnya pada css yang kita buat.
+
+tapi, cara seperti itu masih belum praktis, karena saat kita tulis
+
+body, h1, p {
+	margin: 0;
+	padding: 0;
+}
+
+hanya berlaku pada element yang kita miliki saja, nah bagaimana jika element nya bertambah ?
+misalnya kita punya h2 di bawah p
+
+kita juga harus menambahkan h2 di css nya
+
+body, h1, p, h2 {
+	margin: 0;
+	padding: 0;
+}
+
+masih belum praktiskan?
+
+cara yang praktisnya adalah
+kita bisa menambahkan selector universal dengan menggunakan tanda bintang.
+
+Yang awalnya begini
+body, h1, p, h2 {
+	margin: 0;
+	padding: 0;
+}
+
+menjadi
+* {
+	margin: 0;
+	padding: 0;
+}
+
+artinya,
+semua element yang ada pada HTML kita ubah margin dan padding nya menjadi 0
+
+ada yang bilang juga, melakukan reset menggunakan selector universal itu tidak baik
+karena memberikan margin dan padding ke semua element HTML, meskipun tidak kita gunakan
+jadi bisa kita bilang cara seperti ini juga tidak efisien
+dan juga penggunaannya berat.
+
+
+
+ada cara yang lebih efektif untuk melakukan css reset ini dengan
+menggunakan teknik reset oleh seseorang yang bernama
+erick meyer yaitu
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*
+	atau kalian bisa kunjungi
+	https://meyerweb.com/eric/tools/css/reset/
+
+kalian copy-kan di atas css kalian
+
+contoh nya
+
+CSS ===============================================================
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+[untuk file yang di atas ini tidak perlu lagi kalian ubah]
+
+===================================================================
+
+css kalian letakkan di bawah sini
+
+
+*/

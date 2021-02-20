@@ -1,0 +1,161 @@
+/*
+	Contoh penggunaan float
+
+.container {
+	width: 800px;
+	border: 1px solid black;
+	margin: auto;
+	padding: 5px;
+}
+
+.satu, .dua, .tiga {
+	width: 100px;
+	height: 100px;
+}
+
+.satu {
+	background-color: salmon;
+}
+
+.dua {
+	background-color: limegreen;
+	float: right;
+}
+
+.tiga {
+	background-color: lightskyblue;
+}
+
+(Contoh di float.html)
+==================================================================================================
+
+	Penggunaan text wrapping
+
+
+.container {
+	width: 600px;
+	border: 1px solid black;
+	margin: auto;
+	padding: 5px;
+}
+
+img {
+	float: left;
+	margin: 5px;
+}
+
+(Contoh di textwrapping.html)
+==================================================================================================
+
+	Penggunaan Image Gallery
+
+
+.container {
+	width: 600px;
+	border: 1px solid black;
+	margin: auto;
+	padding: 5px;
+}
+
+
+.kotak {
+	width: 80px;
+	height: 80px;
+	background-color: salmon;
+	color: white;
+	text-align: center;
+	line-height: 80px;
+	font-size: 30px;
+	margin: 2px;
+	float: left;
+}
+untuk urutan yang di mulai dari kiri
+
+
+.kotak {
+	width: 80px;
+	height: 80px;
+	background-color: salmon;
+	color: white;
+	text-align: center;
+	line-height: 80px;
+	font-size: 30px;
+	margin: 2px;
+	float: right;
+}
+untuk urutan yang di mulai dari kanan
+
+(Contoh ada di imagegallery.html)
+==================================================================================================
+
+	Contoh untuk multi-column layout
+
+.container {
+	width: 600px;
+	border: 1px solid black;
+	margin: auto;
+	padding: 5px;
+}
+
+.kiri {
+	width: 150px;
+	height: 500px;
+	background-color: salmon;
+	float: left;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.tengah {
+	width: 500px;
+	height: 500px;
+	background-color: lightskyblue;
+	float: left;
+}
+
+.kanan {
+	width: 150px;
+	height: 500px;
+	background-color: limegreen;
+	float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/

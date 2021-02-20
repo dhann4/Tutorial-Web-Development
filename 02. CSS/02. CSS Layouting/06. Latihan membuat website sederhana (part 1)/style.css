@@ -1,0 +1,155 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*================================================================================================*/
+
+body {
+	font: 16px/28px arial, sans-serif;
+	background-color: grey;
+	color: #333;
+	background-image: url(img/sativa.png);
+}
+
+.gambar {
+	height: 1050px;
+	background-image: url(img/animeHD1.png);
+	background-repeat: no-repeat;
+	background-position: -100px 20px;
+	background-size: 650px 1100px;
+	z-index: 1;
+}
+
+.gambar1 {
+	background-image: url(img/animeHD2.png);
+	background-repeat: no-repeat;
+	background-position: 920px 20px;
+	background-size: 650px 1100px;
+	z-index: 2;
+}
+
+.container {
+	width: 800px;
+	margin-top: -1050px;
+	margin-left: 295px;
+	background-color: #F0EFEF;
+}
+
+.header {
+	padding: 20px;
+	padding-bottom: 5px
+}
+
+.header .judul {
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: underline;
+}
+
+.header ul li {
+	display: inline-block;
+	margin-top: 30px;
+	margin-right: 10px;
+}
+
+.header a {
+	text-decoration: none;
+	color: salmon;
+	padding: 5px;
+}
+
+.header a:hover {
+	background-color: lightskyblue;
+	color: white;
+}
+
+.hero {
+	height: 300px;
+	background-image: url(img/background1.png);
+	background-size: cover;
+	background-position: 0 -20px;
+	border-bottom: 5px solid lightskyblue;
+	border-top: 5px solid powderblue;
+}
+
+.content {
+	padding: 20px;
+}
+
+.content h2 {
+	font-size: 26px;
+	font-weight: bold;
+}
+
+.content .penulis {
+	font-size: 13px;
+	margin-top: -5px;
+}
+
+.content .penulis a {
+	color: salmon;
+	text-decoration: none;
+}
+
+.content .penulis a:hover {
+	background-color: lightskyblue;
+	color: white;
+}
+
+.content p {
+	margin-bottom: 20px;
+	font-size: 14px;
+}
+
+.footed {
+	background-color: grey;
+	padding: 10px;
+}
+
+.footed .copy {
+	color: lightskyblue;
+	text-align: center;
+	font-size: 12px;
+}

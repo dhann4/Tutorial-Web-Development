@@ -1,0 +1,251 @@
+ /*cara pakai margin
+
+.satu {
+	width: 200px;
+	height: 200px;
+	background-color: lightgreen;
+
+maka yang terjadi adalah jarak dari kiri kenan menjadi 100px
+lalu jarak dari atas ke bawah menjadi 30px
+	margin-left: 100px;
+	margin-top: 30px;
+}
+
+.dua {
+	width: 100px;
+	height: 100px;
+	background-color: lightblue;
+}
+
+.tiga {
+	width: 50px;
+	height: 50px;
+	background-color: violet;
+}
+=======================================================================
+
+overlapping margin (saat kedua margin bertemu)
+
+->kasus vertical
+
+.satu {
+	width: 200px;
+	height: 200px;
+	background-color: lightgreen;
+
+	margin-left: 100px;
+	margin-top: 30px;
+}
+
+.dua {
+	width: 100px;
+	height: 100px;
+	background-color: lightblue;
+	
+	margin-top: 50px;
+}
+maka dengan begini hasilnya tidak akan berubah, di sebut overlapping margin
+karena pada dasar nya margin tidak bisa di tambah / jumlah.
+
+.tiga {
+	width: 50px;
+	height: 50px;
+	background-color: violet;
+}
+
+-> kasus horizontal
+
+kita buat display div dari block ke inline-block
+div {
+	display: inline-block;
+}
+
+.satu {
+	width: 200px;
+	height: 200px;
+	background-color: lightgreen;
+}
+
+.dua {
+	width: 100px;
+	height: 100px;
+	background-color: lightblue;
+}
+
+.tiga {
+	width: 50px;
+	height: 50px;
+	background-color: violet;
+}
+
+pada kasus kali ini sedikit aneh, kenapa ?
+kita bisa lihat terdapat jarak pada kotak 1 dan 2 maupun 3
+padahal kita belum memberi properti margin.
+Tapi walaupun kita beri seperti ini	margin-right: 0;, hasilnya tidak akan berubah
+
+caranya, kita kembali ke file html lalu di bagian
+
+	<div class="satu">1</div>
+	<div class="dua">2</div>
+	<div class="tiga">3</div>
+
+kita hilangkan spasi nya, caranya kita tempelkan saja menjadi seperti ini
+
+<div class="satu">1</div><div class="dua">2</div><div class="tiga">3</div>
+
+
+kalau kita jalankan lagi, baru terlihat menempel.
+Ini merupakan kejanggalan jika menggunakan inline-block.
+
+
+nah sekarang kita pertemukan, jika pada kondisi vertical 
+yang di pilih adalah margin yang paling besar,sedangkan jika di horizontal
+akan jumlah margin nya
+
+
+div {
+	display: inline-block;
+}
+
+.satu {
+	width: 200px;
+	height: 200px;
+	background-color: lightgreen;
+
+	margin-right: 30px;
+}
+
+.dua {
+	width: 100px;
+	height: 100px;
+	background-color: lightblue;
+
+	margin-left: 20px;
+}
+
+.tiga {
+	width: 50px;
+	height: 50px;
+	background-color: violet;
+}
+maka jarak antara div 1 dan 2 akan bertambah menjadi 50px
+
+=======================================================================
+
+margin negatif
+
+.satu {
+	width: 200px;
+	height: 200px;
+	background-color: lightgreen;
+
+	margin-bottom: 30px;
+}
+
+.dua {
+	width: 100px;
+	height: 100px;
+	background-color: lightblue;
+
+	margin-top: -150px;
+}
+
+.tiga {
+	width: 50px;
+	height: 50px;
+	background-color: violet;
+}
+
+maka hasilnya, kotak kedua akan naik.
+Ingat pada kasus ini kita bisa lihat bahwa kotak ke 3 juga akan ikut naik
+
+=======================================================================
+
+auto
+
+.satu {
+	width: 200px;
+	height: 200px;
+	background-color: lightgreen;
+
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.dua {
+	width: 100px;
+	height: 100px;
+	background-color: lightblue;
+}
+
+.tiga {
+	width: 50px;
+	height: 50px;
+	background-color: violet;
+}
+
+hasilnya, kotak 1 akan berada di tengah browser
+ingat juga, untuk seperti ini kita harus menambahkan
+
+margin-right: auto;
+margin-left: auto;
+
+jika salah satu saja seperti
+margin-right: auto;
+
+hasilnya tidak akan berubah dan kotak nya tidak ke tengah browser
+
+=======================================================================
+
+shorthand
+
+.satu {
+	width: 200px;
+	height: 200px;
+	background-color: lightgreen;
+
+	margin: 50px;
+}
+
+artinya, pada ke-4 sisi nya menjadi 50px
+
+.dua {
+	width: 100px;
+	height: 100px;
+	background-color: lightblue;
+
+	margin: 50px 100px;
+}
+
+artinya, value pertama 50px untuk atas dan bawah
+sedangkan value kedua 100px untuk kiri dan kanan
+
+atau bisa dengan
+margin: 50px auto;
+
+artinya, value pertama 50px untuk atas dan bawah
+dan value kedua menjadi auto
+
+.tiga {
+	width: 50px;
+	height: 50px;
+	background-color: violet;
+
+	margin: 30px 50px 40px;
+}
+
+artinya, value pertama 30px untuk atas (selalu di mulai dengan atas)
+value kedua 50px untuk kiri dan kanan
+value ketiga 40px untuk bawah
+
+terakhir..
+
+margin: 10px 20px 30px 40px;
+
+artinya, value pertama 10px untuk atas
+value kedua 20px untuk kanan
+value ketiga 30px untuk bawah
+value keempat 40px untuk kiri
+(di baca searah jarum jam)
+
+*/

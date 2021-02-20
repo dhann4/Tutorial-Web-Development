@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dimensi & Overflow</title>
+	<style>
+		/*
+		contoh jika parent nya adalah browser
+		div {
+			width: 200px;
+			height: 200px;
+			
+			width: 100%;
+			maka hasil nya akan relative 100% terhadap browser
+			
+
+			background-color: lightgreen;
+		}
+===================================================================
+		contoh untuk child dan parent yang kita buat
+		
+		.satu {
+			width: 200px;
+			height: 200px;
+			backgtound-color: pink;
+		}
+		
+		.dua {
+			width: 100%;
+			background-color: aqua;
+		}
+		.dua, ukurannya akan relative terhadap parent nya
+		siapa parent nya ?
+		parent nya adalah <div class="satu"></div>
+
+		lalu jika element child nya lebih besar dari element
+		parent nya, maka element child akan keluar dari element
+		parent nya, contoh nya jika kita tambahkan width yang
+		awalnya 100% kita tambahkan menjadi 120% maka element
+		pada child itu keluar dari element parent nya.
+===================================================================
+		div {
+			width: 200px;
+			background-color: pink;
+		}
+		jika tidak kita tambahkan height, maka height / panjang-nya
+		akan terus relative meski sebanyak apapun tulisannya.
+		
+		dan jika kita tambahkan height
+
+		div {
+			width: 200px;
+			height: 200px;
+			background-color: pink;
+		}
+		sekarang, kita bisa lihat bahwa tulisan lorem akan keluar
+		jalur dari tinggi yang di tentukan atau parent nya.
+		maka dengan begini bisa kita simpulkan bahwa height ini
+		adalah absolute
+
+==================================================================
+		penggunaan overflow
+		div {
+			width: 200px;
+			height: 200px;
+			background-color: pink;
+			overflow: auto;
+		}
+		maka hasilnya dia akan menambahkan scroll bar di samping.
+		Ingat hanya berlaku jika kontennya banyak atau keluar jalur dari parent nya, jika konten nya cukup maka tidak ada scroll bar yang muncul.
+
+		div {
+			width: 200px;
+			height: 200px;
+			background-color: pink;
+			overflow: hidden;
+		}
+		lihat, kotaknya akan tetap 200x200px
+		sedangkan kontennya akan sebagian di hilangkan jika
+		melebihi parent nya
+
+		div {
+			width: 200px;
+			height: 200px;
+			background-color: pink;
+			overflow: scroll;
+		}
+		mirip seperti auto akan memunculkan scroll, bedanya jika auto konten nya cukup scroll nya akan hilang, sedangkan untuk scroll meskipun konten nya cukup scroll nya tidak hilang
+		*/
+
+	</style>
+</head>
+<body>
+	<!-- menggunakan satuan px dan %
+		<div>Hello World</div>
+	-->
+
+	<!-- membuat child dan parent sendiri
+	 
+	 <div class="satu">
+	 	<div class="dua">
+	 		Hello World
+	 	</div>
+	 </div> -->
+
+	 <!-- contoh lain nya pada kasus child dan parent -->
+	 <div class="satu">
+	 	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	 	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	 	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	 </div>
+
+</body>
+</html>
