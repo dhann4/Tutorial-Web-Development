@@ -1,0 +1,146 @@
+/*
+	Pseudo Class adalah kelas semu yang di miliki oleh semua elemen HTML, yang membuat kita dapat mendefinisikan style pada "keadaan tertentu" dari elemen tersebut
+	kenapa di sebut kelas semu?
+	kelas nya itu sendiri ada cuma dia hanya akan aktif dalam kedaan tertentu
+
+	Pseudo CLass memiliki beberapa tipe antara lain
+	A. pseudo-class yang berhubungan dengan link
+		1. :link = style default pada sebuah link (a yang memiliki href)
+		2. :hover = style ketika kursor mouse berada diatas sebuah link / elemen
+		3. :active = style ketika sebuah link di-klik (keadaan aktif)
+		4. :visited = style ketika sebuah link sudah pernah di kunjungi sebelumnya (menggunakan browser yang sama)
+===============================================================================================================================================================================
+
+cara menjalankan pseudo-class yaitu setelah class kasih tanda titik dua (:) lalu nama pseudo-class nya apa
+
+A. link
+
+
+.hello:link {
+	color: orange;
+}
+sebenarnya tanpa di kasih :link bisa juga, :link ini akan bekerja jika elemen nya link atau <a>
+
+
+.hello:hover {
+	color: green;
+	font-family: arial;
+	font-size: 20px;
+}
+tidak ada bedanya jika dilihat tampilan nya akan tetap default,
+tapi ketika mouse nya di arahkan ke link maka font nya akan berubah menjadi arial lalu size nya menjadi 20px dan warna nya menjadi hijau
+
+
+.hello:active {
+	font-style: italic;
+}
+sama seperti hover jika di lihat tidak berbeda,
+tapi ketika di klik font nya akan menjadi italic atau miring
+
+.hello:visited {
+	color: red;
+}
+
+warna nya akan berubah ketika sudah pernah mengunjungi link tersebut
+
+===============================================================================================================================================================================
+	
+	B. pseudo-class yang berhubungan dengan posisi elemen(1)
+		1. :first-child = memilih elemen pertama dari sebuah parent (elemen pembungkusnya)
+		2. :last-child (bukan nama band :v) = memilih elemen terakhir dari sebuah parent (elemen pembungkusnya)
+		3. :nth-child(n) = memilih elemen ke-n dari sebuah parent (elemen pembungkusnya).
+						   n bisa berarti urutan (1), (2),... atau pola (2n), (3n+2), (4n-1) atau ganjil dan genap (even) & (odd)
+
+B. elemen
+
+li:first-child a {
+	color: green;
+}
+artinya, css tolong carikan saya <a> yang ada di dalam <li> yang merupakan anak pertama, lalu ubah warnanya menjadi hijau
+
+li:last-child a {
+	color: green;
+}
+
+artinya sama seperti yang di atas hanya saja last-child hanya untuk anak terakhir tidak perduli seberapa banyak link yang kita punya
+tetap yang berubah adalah yang terakhir
+
+
+li:nth-child(3) a {
+	color: green;
+}
+
+artinya, css tolong carikan saya <a> yang ada di dalam <li> yang merupakan anak ke-3, lalu ubah warnanya menjadi hijau
+nah yang nth-child jangan lupa di kasih parameternya dari 1 - 10 (tergantung berapa banyak link nya)
+
+lalu
+
+li:nth-child(2n) a {
+	color: green;
+}
+
+artinya, css tolong carikan saya <a> yang ada di dalam <li> yang ber-kelipatan 2, lalu ubah warnanya menjadi hijau
+jadi di link 2,4,6,8,dan 10 warnanya akan berubah menjadi hijau
+
+untuk yang kelipatan 3 sampai seterusnya juga sama, jangan lupa setelah angka di kasih (n) yang menandakan kelipatan seperti
+
+3n, 4n, 5n,....
+
+lalu
+
+li:nth-child(3n-2) a {
+	color: green;
+}
+
+artinya, css tolong carikan saya <a> yang ada di dalam <li> yang ber-kelipatan 3 dan di mulai dengan anak pertama, lalu ubah warnanya menjadi hijau
+jika kelipatan 3 biasanya di mulai dari angka 3, tapi kita ingin mulai dengan angka 1, tinggal di hitung mundur saja dari angka 3 hitung mundur ke 1
+jadi nya 2 bukan, dan kalau untuk mengurangi kita memakai tanda apa ? yap, tanda minus(-).
+
+kalau dilihat angka 4 akan berubah warna nya menjadi hijau sedangkan 4 bukan kelipatan 3,
+gimana tuh?. 3n-2 sama saja dengan 3n+1, 3n nya berawal dari link 3 lalu di tambah satu jadinya berada di link 4
+
+dan yang terakhir bisa menggunakan ganjil = odd dan genap = even
+
+li:nth-child(even) a {
+	color: green;
+}
+
+artinya, css tolong carikan saya <a> yang ada di dalam <li> yang merupakan angka genap, lalu ubah warnanya menjadi hijau
+
+
+sekarang kita bisa kombinasikan seperti
+
+li:nth-child(odd) a:hover {
+	color: red;
+}
+
+artinya, ketika mouse nya di arahkan ke link yang ganjil, maka link yang ganjil tadi warna nya berubah menjadi merah
+
+===============================================================================================================================================================================
+
+	C. pseudo-class yang berhubungan dengan posisi elemen(2)
+		1. :first-of-type = memilih elemen pertama dari sebuah jenis / tipe tag
+		2. :last-of-type = memilih elemen terakhir dari sebuah jenis / tipe tag
+
+oke, bagaimana jika kita ingin mengubah tag paragraf <p>?
+jika kita menggunakan pseudo-class seperti yang di atas, hasil nya tidak akan berubah
+
+p:first-child {
+	color: blue;
+}
+
+karena <p> tidak mempunyai anak, <p> hanya merupakan paragraf yang berisi teks.
+Jika ingin mengubah nya kita bisa gunakan :first-of-type dan :last-of-type
+
+p:first-of-type {
+	color: red;
+}
+artinya, tag <p> yang pertama warnanya akan berubah menjadi merah
+
+p:last-of-type {
+	color: red;
+}
+
+artinya tag <p> yang terakhir warnanya akan berubah menjadi merah
+
+*/
