@@ -1,0 +1,50 @@
+<!-- 
+Relative ==========================================================
+	"-> ketika kita menggerakkan element dengan posisi relative
+		(menggunakan properti top, left, bottom, dan right), ruang
+		yang di tempati oleh element tersebut masih ada
+
+	 -> ketika kita menggerakkan element dengan posisi relative,
+	   	element akan bergerak relatif terhadap posisi semulanya
+
+	 -> jika kite memberi properti top: 0; dan left: 0; maka
+	   	element tidak berubah posisinya"
+	
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Coba Posotion</title>
+	<style>
+		div {
+			width: 200px;
+			height: 200px;
+		}
+
+		.satu {
+			background-color: lightgreen;
+		}
+
+		.dua {
+			background-color: salmon;
+			position: relative;
+			top: 30px;
+			left: 50px;
+		}
+
+		.tiga {
+			background-color: violet;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="satu"></div>
+	<div class="dua"></div>
+	<div class="tiga"></div>
+
+</body>
+</html>
