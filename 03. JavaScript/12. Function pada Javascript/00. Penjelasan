@@ -1,0 +1,114 @@
+function adalah kunci utama pada javascript, yang membuat javascript sangat powerfull
+
+function
+-> block code yang dibuat untuk melakukan tugas spesifik
+-> dapat dipanggil berulang kali
+-> memudahkan penelusuran
+-> reusability
+
+dalam pemrograman lain ada istilah yang namanya
+-> method
+-> class
+-> constructor
+-> module
+
+dalam javascript semua itu bisa di tampung hanya dengan menggunakan function
+
+definisi function adalah
+-> sebuah sub-program / sub-routine yang dapat di panggil di
+   bagian lain pada program.
+-> merupakan struktur dasar pembentuk dari Javascript
+-> disebut juga sebagai prosedur ( kumpulan statement
+   untuk melakukan tugas atau menghitung sebuah nilai )
+-> untuk dapat menggunakannya, kita harus membuat terlebih
+   dahulu function tersebut, lalu memanggil-nya
+-> termasuk kedalam First-Class object
+
+kenapa harus menggunakan function?
+-> mencegah reusability ( DRY : Do not Repeat Yourself )
+-> dekomposisi / abstraksi
+-> modularitas
+
+ada dua kategori dalam function yaitu
+-> built-in function ( function yang sudah di buat oleh
+   Javascript dan kita tinggal menggunakannya saja )
+-> user-defined function ( function yang kita buat sendiri )
+
+built-in function:
+-> fungsi yang sudah disediakan / dibuat oleh Javascript
+-> kita tinggal memanggilnya saja / tinggal pakai saja
+-> dan masih banyak lagi
+   contoh function yang sudah di buatkan oleh javascript:
+		-> alert();
+		-> confirm();
+		-> prompt();
+
+built-in function: String
+-> chartAt(), slice(), split(), toStirng(), toLowerCase(),
+   toUpperCase(), ....
+-> https://www.w3schools.com/jsref/jsref_obj_string.asp
+
+built-in function: math
+-> sin(), cos(), tan(), random(), round(), floor(), ceil(), log(),
+   ....
+-> https://www.w3schools.com/jsref/jsref_obj_math.asp
+
+dan masih banyak lagi biult-in function yang lainnya.
+
+user-defined function
+-> fungsi yang kita buat sendiri
+-> menggunakan keyword function
+-> nama function( optional )
+-> parameter / argument
+	-> disimpat di dalam ()
+	-> boleh ada atau tidak, jika ada boleh lebih dari satu
+	-> dipisahkan oleh koma(,)
+-> function body, dibungkus dengan {}
+-> dapat mengembalikan nilai(return value) atau tidak
+
+membuat user-defined function
+-> dengan deklarasi / function declaration
+-> dengan ekspresi / function expression
+
+contoh membuat function declaration
+function jumlahDuaBilangan(a, b) {
+	var total;
+	total = a + b;
+	return total;
+}
+
+contoh membuat function expression
+var jumlahDuaBilangan = function(a, b) {
+	var total;
+	total = a + b;
+	return total;
+}
+
+struktur function :
+keyword ( function )
+nama function ( jumlahDuaBilangan )
+parameter ( (a, b), meski tidak ada parameternya, tetap harus ada () ) {
+	function body
+	var total;
+	total = a + b;
+
+	return value ( return total; )
+}
+
+memanggil / menjalankan function
+-> cara menjalankan function jika memiliki parameter
+alert(jumlahDuaBilangan(1, 2));
+alert(jumlahDuaBilangan(25, 30));
+alert(jumlahDuaBilangan(1500, 17.5));
+
+funtion declaration
+-> lebih fleksibel (dapat ditulis dimanapun)
+	-> karena konsep hoisting
+-> mudah di pahami pemula
+
+funtion expression
+-> harus didefinisikan terlebih dahulu sebulum di panggil
+-> lebih powerfull:
+	-> sebagai closure
+	-> sebagai argumen untuk funtion lain
+	-> IIFE (Immediately Invoked Function Expression)

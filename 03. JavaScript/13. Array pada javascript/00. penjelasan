@@ -1,0 +1,50 @@
+array secara umum:
+array adalah susunan sistematis dari objek-objek serupa.
+
+array dalam bahasa programming:
+array adalah tipe data yang digunakan untuk mendeskripsikan
+kumpulan elemen (nilai atau variable), yang tiap-tiap elemennya
+memiliki index.
+
+contoh:
+var hari = [ 'senin','selasa','rabu',.. ];
+
+kenapa harus menggunakan array?
+-> mempermudah pengelolaan nila / value / data
+	-> penelusuran dan pencarian
+-> manajemen memori
+
+array
+-> variable jamak, yang mempunyai banyak elemen dan diacu dengan
+   nama yang sama
+-> kumpulan pasangan key dan nilai / key and value pair
+-> key adalah index pada array dengan tipe integer yang dimulai dari 0
+-> array pada javascript bertipe object
+-> array pada javascript memiliki fungsi / method length untuk
+   menghitung jumlah elemen di dalamnya
+-> elemen pada array boleh memiliki tipe data yang berbeda
+
+elemen pada array boleh beda tipe contohnya:
+var hari = ['senin', 'selasa', 'rabu'];
+var angka = [10, 123, 12345];
+var myArr = ['teks', 2, false];
+cara menampilkan ke console adalah
+kita pilih var hari lalu kita ingin tampilkan hari selasa
+lalu kita hitung index-nya(di awali dengan 0 yaitu senin)
+berarti selasa index-nya adalah 1
+jadi kita tulis:
+console.log(hari[1]);
+
+atau kita juga bisa memasukkan function di dalam array
+var myFunc = function() {
+	alert('hello world');
+}
+var myArr2 = ['teks', 2, false, myFunc];
+
+dan kita juga bisa memasukkan array di dalam array, yang disebut juga
+sebagai array multidimensi / array bersarang. Contohnya:
+var myArr3 = ['teks', 2, false, myFunc, [4,5,6]];
+
+jika kita ingin menampilkan angka 5 di dalam konsol bagaimana caranya?
+caranya adalah:
+console.log(myArr3[4][1]);

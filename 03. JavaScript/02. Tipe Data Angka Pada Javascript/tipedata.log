@@ -1,0 +1,14 @@
+2/0
+Infinity
+
+-100/0
+-Infinity
+
+0/0
+NaN
+
+5 / 'dhanna'
+NaN
+
+100 / '10'
+10

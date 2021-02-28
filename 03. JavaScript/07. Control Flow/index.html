@@ -1,0 +1,90 @@
+<!-- 
+	dalam pemrograman ada yang di sebut dengan control flow,
+	lalu dalam control flow ada istilah seperti
+
+	
+	-> Normal Flow
+		apabila program kita memiliki lebih dari sati statement,
+		maka statement tersebut akan di eksekusi dari
+		atas ke bawah atau dari kiri ke kanan.
+
+		contoh nya:
+		alert('Halo'); yang di eksekusi pertama kali
+		alert('nama'); kedua
+		alert('saya'); ketiga
+		alert('user'); keempat
+		dan seterusnya
+
+		atau
+
+		var angka = prompt('masukkan angka');
+		alert('angka yang anda masukkan adalah :' + angka);
+
+		lalu bisa saja kita tidak ingin control flow nya seperti
+		itu contohnya ada beberapa statement yang tidak ingin
+		kita eksekusi, kita bisa menggunakan
+		pengulangan dan pengkondisian.
+
+		pengulangan bisa di sebut juga dengan loop / iteration.
+		di gunakan untuk mengeksekusi statement lebih dari 1x.
+		untuk syntax pengulangan pada javascript itu ada banyak,
+		salah satu contoh nya adalah:
+			-> for
+			-> while
+			-> do while
+
+		contoh nya, jika kita ingin menuliskan alert yang sama  sebanyak 5x yang awalnya pada penulisan biasa kita menggunakan
+
+		alert('mulai');
+		alert('Hello world');
+		alert('Hello world');
+		alert('Hello world');
+		alert('Hello world');
+		alert('Hello world');
+		alert('selesai');
+	
+		kita bisa mengganti syntax nya seperti ini
+		
+		alert('mulai');
+		for(var i = 0; i < 5; i++) {
+			alert('hello world!');
+		}
+		alert('selesai');
+		
+
+		lalu ada juga yang disebut pengkondisian / percabangan 
+		adalah sebuah keadaan dimana program kita bisa memilih
+		untuk mengeksekusi statement yang berbeda berdasarkan
+		kondisi yang diberikan.
+		ada beberapa syntax yang harus di perhatikan dalam
+		javacript yaitu:
+			-> if
+			-> if...else
+			-> if...else if...else
+			-> switch
+
+		contoh sederhananya begini
+		
+		var angka = prompt('Masukkan angka');
+		if(angka % 2 === 0) {
+		  alert(angka + ' adalah bilangan genap');
+		} else {
+		  alert(angka + ' adalah bilangan ganjil');
+		}
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+    <h1>Test</h1>
+
+	<script src="script.js"></script>
+</body>
+</html>

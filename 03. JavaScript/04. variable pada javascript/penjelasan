@@ -1,0 +1,125 @@
+pada variable javascript dibagi menjadi:
+
+	-> number / integer
+	-> huruf / string
+	-> boolean
+
+
+lalu untuk number tidak boleh melewati
+batas dari 15 angka karena akan error
+atau seperti ini
+
+2/0
+Infinity
+
+-100/0
+-Infinity
+
+0/0
+NaN
+
+5 / 'string'
+NaN
+
+
+untuk string ada yang harus di perhatikan
+jika
+10 + "10"
+
+hasilnya akan menjadi 1010.
+karena tanda + pada javascript di anggap penggabungan
+bukan penjumlahan (hanya berlaku kepada integer + "string")
+
+contoh di atas hanya berlaku pada operasi
+penjumlahan, sedangkan untuk kurang, kali dan bagi
+hasil nya
+
+100 - '10'
+90
+
+100 * '10'
+1000
+
+100 / '10'
+10
+
+
+boolean bernilai True dan False,
+dan pada boolean value: 0, "", infinity, NaN akan di anggap False
+sedangkan value, angka selain 0, "string", dan tidak bersifat infinity maupun NaN
+akan di anggap True.
+
+
+penulisan variable pada javascript harus di awali dengan
+var
+
+pada var sendiri ada aturan-aturan yang harus di perhatikan
+var ga boleh pake spasi
+var 1gaboleh
+var boleh1
+var ini_juga_boleh
+var boleh$
+var $_$
+var iniBolehBanget
+
+ada juga kata-kata yang tidak boleh digunakan sebagai
+nama pada var nya atau biasa di sebut keyword & reserved word
+karena ada beberapa nama yang digunakan untuk syntax javascript
+yaitu:
+
+break
+case
+catch
+class
+const
+continue
+debugger
+default
+delete
+do
+else
+enum
+export
+extends
+dalse
+finally
+for
+function
+if
+implements
+import
+in
+instanceof
+interface
+let
+new
+null
+package
+private
+protected
+public
+return
+static
+super
+switch
+this
+throw
+true
+try
+typeof
+var
+void
+while
+with
+yield
+
+
+lalu kita bisa menggunakan shorthand tanpa menulis
+var nama = "nama"
+var umur = 20
+var lulus = true
+
+bisa dengan
+var nama = "nama"
+	umur = 20
+	lulus = true
