@@ -1,0 +1,43 @@
+definisi dari DOM menurut Mozilla adalah :
+" DOM adalah antarmuka pemrograman untuk HTML yang merepresentasikan halaman web, sehingga program dapat mengubah dan memanipulasi strukturnya "
+==============================================================
+DOM
+-> Antarmuka pemrograman berbasis objek yang merepresentasikan dokumen web
+-> DOM membuat seluruh komponen dari halaman web dapat di akses & dimanipulasi
+-> Komponen
+	-> Elemen HTML
+	-> Atribut
+	-> Text
+	-> dll
+-> DOM dapat dimanipulasi (dibuat, diubah, dihapus) menggunakan javascript
+==============================================================
+Tipe-tipe node
+-> Elemen
+-> Attribute
+-> Text
+-> CData Section
+-> Entity Reference
+-> Entity
+-> Processing Instruction
+-> Comment
+-> Document
+-> Document Type
+-> Document Fragment
+-> Notation
+==============================================================
+NodeList & HTMLCollection
+-> Keduanya merupakan kumpulan node
+-> Struktur datanya mirip array
+-> nodeList dapat berisi node apapun. sedangkan HTMLCollection harus berisi elemen HTML
+-> HTMLCollection bersifat live, sedangkan nodeList tidak
+==============================================================
+Struktur Hierarki DOM Tree
+-> Root Node
+	-> node yang menjadi sumber dari semua node lain di dalam DOM
+	-> document
+-> Parent Node
+	-> node yang berada 1 tingkat diatas node yang lain
+	-> body adalah parent dari h1, p, p, div dan a
+-> Child Node
+	-> node yang berada 1 tingkat dibawah node yang lain
+	-> h1 adalah child dari body
